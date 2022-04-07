@@ -25,3 +25,13 @@ Padrão de projeto DAO (Data Access Object)
     - hashCode and equals
     - toString
     - implements Serializable
+
+## Seller entity class
+
+- Entity class checklist:
+    - Attributes
+    - Constructors
+    - Getters/Setters
+    - hashCode and equals
+    - toString
+    - implements Serializable
