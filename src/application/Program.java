@@ -8,10 +8,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
         System.out.println("=== TEST 1: seller findById =====");
@@ -31,7 +33,7 @@ public class Program {
             System.out.println(obj);
         }
 
-        System.out.println("\n==== TEST 4: seller insert =====");
+        /**System.out.println("\n==== TEST 4: seller insert =====");
         Seller newSeller = new Seller(null,
                 "Greg",
                 "greg@gmail.com",
@@ -46,7 +48,13 @@ public class Program {
         seller = sellerDao.findById(1);
         seller.setName("Bob Black");
         sellerDao.update(seller);
-        System.out.println("Update Completed");
+        System.out.println("Update Completed");*/
+
+        System.out.println("\n==== TEST 6: seller delete =====");
+        System.out.println("Enter id for delete test: ");
+        int id = sc.nextInt();
+        sellerDao.deletById(id);
+        System.out.println("Delete Completed");
 
     }
 }
